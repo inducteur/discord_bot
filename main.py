@@ -5,7 +5,9 @@ import discord
 import asyncio
 import json
 import requests
-import os                                                                                                                                                                                                                                                                                                                    from dotenv import load_dotenv as load                                                                                                                                                                                                                                                                                          
+
+import os
+from dotenv import load_dotenv as load                                                                                                                                                                                                                                                                                          
 client = discord.Client()
 
 load()
@@ -18,8 +20,9 @@ async def on_ready():
    
     # Verify that the guild the client is in is the desired guild according to the environment
     for guild in client.guilds:
-        if guild.name == GUILD
-        break
+        if guild.name == GUILD:
+            break
+    
     print(
         f'{client.user} here, ready to automate. In '
         f'{guild.name}(id: {guild.id})'
